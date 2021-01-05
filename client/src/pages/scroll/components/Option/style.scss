@@ -1,0 +1,29 @@
+.option {
+    &-content {
+        height: 120px;
+    }
+    &-slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-color {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 150px;
+        &-item {
+            width: 50px;
+            height: 50px;
+            margin: 0 1px;
+        }
+    }
+}
+.slider {
+    &-show {
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+    }
+}

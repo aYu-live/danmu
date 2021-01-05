@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    &-item {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        font-size: 50px;
+        padding: 30px 0;
+        height: 100px;
+        width: 51vw;
+    }
+}
