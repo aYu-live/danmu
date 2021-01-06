@@ -9,7 +9,7 @@ const rp = require('request-promise');
 // 初始化 cloud
 cloud.init({
   // API 调用都保持和云函数当前所在环境一致
-  env: 'pk-word-env',
+  env: cloud.DYNAMIC_CURRENT_ENV,
   traceUser: true,
 })
 exports.main = async (event, context) => {

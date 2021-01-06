@@ -1,12 +1,12 @@
 {
-  "miniprogramRoot": "client/dist/",
+  "miniprogramRoot": "client/dist/weapp",
   "cloudfunctionRoot": "cloud/functions/",
   "projectname": "danmu",
   "description": "",
   "appid": "wx47cd61a3bbe9d4c6",
   "setting": {
     "urlCheck": true,
-    "es6": false,
+    "es6": true,
     "enhance": false,
     "postcss": false,
     "preloadBackgroundData": false,

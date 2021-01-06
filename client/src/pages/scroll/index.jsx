@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useLayoutEffect  } from 'react';
+import React, { useState, useEffect, useLayoutEffect  } from 'react';
 import Taro, { useShareAppMessage, useShareTimeline  } from '@tarojs/taro';
 import { View, Input, Image } from '@tarojs/components';
 import { AtToast } from "taro-ui";
@@ -24,7 +24,9 @@ const ScrollIndex = () => {
     const [ option, setOption ] = useState(optionList);
     const [toast, setToast] = useState('')
     // 
-
+    useEffect(() => {
+        Taro.cloud.init();
+    }, [])
     useShareAppMessage(res => {
         if (res.from === 'button') {
             // 来自页面内转发按钮
@@ -43,7 +45,6 @@ const ScrollIndex = () => {
         }
       })
     const blurInput = _.debounce((e) => {
-        // Taro.cloud.init()
         e.stopPropagation()
         const { currentTarget: {value} } = e
         if (Taro.getEnv().toLowerCase() === 'alipay') {
